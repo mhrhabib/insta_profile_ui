@@ -29,16 +29,38 @@ class InstaProfile extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 8),
-            height: 150,
-            // color: Colors.grey,
+            margin: const EdgeInsets.only(top: 6),
+            height: MediaQuery.of(context).size.height * .17,
+            color: Colors.white,
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(4),
-                  child: const CircleAvatar(
-                    radius: 40,
-                    backgroundColor: Colors.amber,
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.all(8),
+                  height: 70,
+                  width: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(35),
+                    border: Border.all(
+                      color: Colors.yellow,
+                      width: 2,
+                    ),
+                  ),
+                  child: Container(
+                    height: 75,
+                    width: 75,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(36.5),
+                      image: const DecorationImage(
+                        fit: BoxFit.fill,
+                        image: NetworkImage('https://picsum.photos/200/300'),
+                      ),
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 3,
+                      ),
+                    ),
                   ),
                 ),
                 Expanded(
@@ -50,20 +72,38 @@ class InstaProfile extends StatelessWidget {
                         children: [
                           Column(
                             children: const [
-                              Text('31'),
-                              Text("posts"),
+                              Text(
+                                '31',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text('posts'),
                             ],
                           ),
                           Column(
                             children: const [
-                              Text('1332'),
-                              Text("followers"),
+                              Text(
+                                '1332',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text('followers'),
                             ],
                           ),
                           Column(
                             children: const [
-                              Text('230'),
-                              Text("following"),
+                              Text(
+                                '230',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text('following'),
                             ],
                           ),
                         ],
@@ -73,28 +113,18 @@ class InstaProfile extends StatelessWidget {
                         children: [
                           OutlinedButton(
                             style: OutlinedButton.styleFrom(
-                              minimumSize: Size(
-                                150,
-                                MediaQuery.of(context).size.height * .05,
-                              ),
-                            ),
+                                minimumSize: const Size(170, 40)),
                             onPressed: () {},
                             child: const Text(
-                              'message',
+                              'Message',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
                           OutlinedButton(
                             style: OutlinedButton.styleFrom(
-                              minimumSize: Size(
-                                12,
-                                MediaQuery.of(context).size.height * .05,
-                              ),
-                            ),
+                                minimumSize: const Size(20, 40)),
                             onPressed: () {},
                             child: Row(
                               children: const [
@@ -106,8 +136,13 @@ class InstaProfile extends StatelessWidget {
                             ),
                           ),
                           OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                                minimumSize: const Size(20, 40)),
                             onPressed: () {},
-                            child: Icon(Icons.arrow_downward),
+                            child: const Icon(
+                              Icons.arrow_drop_down,
+                              color: Colors.black,
+                            ),
                           ),
                         ],
                       ),
