@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'screens/insta_profile.dart';
+import 'screens/my_listview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       darkTheme: ThemeData.dark(),
-      home: const InstaProfile(),
+      home: MyListView(),
     );
   }
 }
