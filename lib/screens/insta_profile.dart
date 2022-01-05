@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'my_listview.dart';
+
 class InstaProfile extends StatelessWidget {
   const InstaProfile({Key? key}) : super(key: key);
 
@@ -153,6 +155,10 @@ class InstaProfile extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 600,
+              child: MyListView(),
             ),
           ],
         ),

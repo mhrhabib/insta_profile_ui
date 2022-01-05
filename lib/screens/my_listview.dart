@@ -17,26 +17,24 @@ class MyListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("listView")),
-      body: ListView.builder(
-          itemCount: friends.length,
-          itemBuilder: (BuildContext context, int index) {
-            return Container(
-              margin: const EdgeInsets.all(8),
-              alignment: Alignment.center,
-              height: 80,
-              width: 100,
-              color: colors[index],
-              child: Text(
-                friends[index],
-                style: const TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                ),
-              ),
-            );
-          }),
+    return ListView.builder(
+      itemCount: friends.length,
+      itemBuilder: (BuildContext context, int index) {
+        return Container(
+          margin: const EdgeInsets.all(8),
+          alignment: Alignment.center,
+          height: 80,
+          width: 100,
+          color: colors[index],
+          child: Text(
+            friends[index],
+            style: const TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
+          ),
+        );
+      },
     );
   }
 }
