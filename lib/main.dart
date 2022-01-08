@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/insta_profile.dart';
 import 'screens/my_listview.dart';
 import 'screens/my_second_listview.dart';
+import 'screens/new_stateful_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      darkTheme: ThemeData.dark(),
-      home: MySecondListView(),
+      //darkTheme: ThemeData.dark(),
+      home: NewStatefulWidget(),
     );
   }
 }

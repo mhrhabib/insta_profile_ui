@@ -12,7 +12,7 @@ class MyListView extends StatelessWidget {
     Colors.brown,
     Colors.purple,
     Colors.orange,
-    Colors.lime,
+    Colors.lime
   ];
 
   @override
