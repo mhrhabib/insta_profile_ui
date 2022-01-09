@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -14,6 +13,13 @@ class _DiceAppUiState extends State<DiceAppUi> {
   int leftDice = 1;
   int rightDice = 2;
 
+  changeTheDice() {
+    setState(() {
+      rightDice = Random().nextInt(6) + 1;
+      leftDice = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,11 +31,7 @@ class _DiceAppUiState extends State<DiceAppUi> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           InkWell(
-            onTap: () {
-              setState(() {
-                leftDice = Random().nextInt(6) + 1;
-              });
-            },
+            onTap: changeTheDice,
             child: Container(
               height: 200,
               width: 200,
@@ -42,6 +44,7 @@ class _DiceAppUiState extends State<DiceAppUi> {
             ),
           ),
           InkWell(
+            onTap: changeTheDice,
             child: Container(
               height: 200,
               width: 200,
