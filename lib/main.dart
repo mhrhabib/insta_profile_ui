@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:insta_profile_ui/diceGame/dice_app_ui.dart';
 
-import 'messenger_screen.dart';
+import 'screens/insta_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //darkTheme: ThemeData.dark(),
-      home: MessengerScreen(),
+      home: InstaProfile(),
     );
   }
 }

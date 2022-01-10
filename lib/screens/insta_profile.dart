@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'my_listview.dart';
 
-class InstaProfile extends StatelessWidget {
+class InstaProfile extends StatefulWidget {
   const InstaProfile({Key? key}) : super(key: key);
 
+  @override
+  State<InstaProfile> createState() => _InstaProfileState();
+}
+
+class _InstaProfileState extends State<InstaProfile> {
+  String name = 'Data';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,9 +162,20 @@ class InstaProfile extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 600,
-              child: MyListView(),
+            Text(
+              name,
+              style: const TextStyle(fontSize: 44),
+            ),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  name = 'Hello world';
+                });
+              },
+              child: const Text(
+                "click me",
+                style: TextStyle(fontSize: 44),
+              ),
             ),
           ],
         ),
